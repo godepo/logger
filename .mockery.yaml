@@ -1,0 +1,14 @@
+with-expecter: True
+dir: ./
+mockname: "Mock{{.InterfaceName}}"
+filename: "mock_{{.InterfaceName}}_test.go"
+outpkg: "logger"
+inpackage: True
+packages:
+  github.com/godepo/logger:
+    config:
+      all: False
+    interfaces:
+      Logger:
+        config:
+          issue-845-fix: True
