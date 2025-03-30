@@ -24,6 +24,10 @@ func With(ctx context.Context, attrs ...slog.Attr) context.Context {
 	return context.WithValue(ctx, logInstance, From(ctx).With(attrs...))
 }
 
+func Wrap(ctx context.Context, logger Logger) context.Context {
+	return context.WithValue(ctx, logInstance, logger)
+}
+
 func From(ctx context.Context) Logger {
 	log, ok := ctx.Value(logInstance).(Logger)
 	if !ok {

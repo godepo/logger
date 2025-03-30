@@ -2,11 +2,14 @@ version: "2"
 run:
   concurrency: 8
   issues-exit-code: 1
-  tests: false
 linters:
   default: all
   disable:
     - ireturn
+    - varnamelen
+    - paralleltest
+    - testpackage
+    - depguard
   settings:
     lll:
       line-length: 120
