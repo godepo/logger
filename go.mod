@@ -5,7 +5,7 @@ go 1.24.1
 require (
 	github.com/godepo/groat v0.0.1
 	github.com/google/uuid v1.6.0
-	github.com/stretchr/testify v1.10.0
+	github.com/stretchr/testify v1.11.1
 )
 
 require (
